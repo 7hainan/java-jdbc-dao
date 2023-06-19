@@ -7,10 +7,11 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        Department department = new Department(1,"Recursos Humanos");
-        Seller seller = new Seller(1,"Thainan","thainan@gmail.com",new Date(),4000.0,department);
+        //Department department = new Department(1,"Recursos Humanos");
+        //Seller seller = new Seller(1,"Thainan","thainan@gmail.com",new Date(),4000.0,department);
 
         SellerDao sellerDao = DaoFactory.createSellerDao();
+        Seller seller = sellerDao.findById(5);
 
         System.out.println(seller);
     }
