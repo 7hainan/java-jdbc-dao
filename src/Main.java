@@ -25,5 +25,13 @@ public class Main {
         Seller newestSeller = new Seller("Elisangela","elisangela@gmail.com",new Date(),8000.0,new Department(3,null));
         sellerDao.insert(newestSeller);
         System.out.println("Inserted!! new ID : " + newestSeller.getId());
+
+        System.out.println("\n ======== TEST 05 UPDATE =========");
+        Seller sellerUpdate = sellerDao.findById(11);
+        sellerUpdate.setName("Zeze polessa");
+        sellerDao.update(sellerUpdate);
+
+        System.out.println("\n ======== TEST 06 DELETEBYID =========");
+        sellerDao.deleteById(13);
     }
 }
